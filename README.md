@@ -1,6 +1,6 @@
 # Frontend Mentor - Calculator app solution
-
-This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+# DISCLAIMER - First Version Performance not regarded here no best practices considered just needed a working version. Changes will be made
+This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend 
 
 ## Table of contents
 
@@ -33,10 +33,10 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 ![](src/assets/images/ThemeOne.png)
-![](src/assets/images/ThemeTwo.png)
+![](src/assets/images/ThemeTwo.png.png)
 ![](src/assets/images/ThemeThree.png)
 ![](src/assets/images/ThemeOne-mobile.png)
-![](src/assets/images/ThemeTwo-mobile.png)
+![](src/assets/images/ThemeTwo-mobile.png.png)
 ![](src/assets/images/ThemeThree-mobile.png)
 
 
@@ -47,7 +47,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/calculator-app-30PTn3AfAx
 - Live Site URL: https://installable-calculator.netlify.app/
 
 ## My process
@@ -58,60 +58,104 @@ Users should be able to:
 - CSS custom properties
 - Flexbox
 - CSS Grid
-- Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
+- [React](https://reactjs.org/) - JS library
+
+
+
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
 
-To see how you can add code snippets, see below:
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+I learnt how to implement three themes in an application which is was my first time of trying that 
+
+
 ```css
 .proud-of-this-css {
   color: papayawhip;
 }
 ```
+I learnt to use the js arrray methods well not 
 ```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
+export default function CalcualtorFunc(btn, refScreen) {
+  if (btn.innerText === "RESET") {
+    refScreen.current.innerText = "";
+  } else if (btn.innerText === "=") {
+    try {
+      let checker = refScreen.current.innerText.split("");
+      if (checker.includes("x")) {
+        let placeholder = "";
+        const modifiedArray = checker.map((key) => {
+          if (key == "x") {
+            key = "*";
+          } else {
+            key = key;
+          }
+          return (placeholder += key);
+        });
+
+        refScreen.current.innerText = eval(placeholder);
+      } else if (refScreen.current.innerText.startsWith("0")) {
+        let placeholder = "";
+        const modifiedArray = Array.from(refScreen.current.innerText);
+        modifiedArray.shift();
+        modifiedArray.map((key) => {
+          return (placeholder += key);
+        });
+
+        refScreen.current.innerText = eval(placeholder);
+      }
+      refScreen.current.innerText = eval(refScreen.current.innerText);
+    } catch (error) {
+      refScreen.current.innerText = "Syntax Error";
+    }
+  } else if (btn.innerText === "DEL") {
+    const newEls = Array.from(refScreen.current.innerText);
+    if (refScreen.current.innerText === "Syntax Error") {
+      refScreen.current.innerText = " ";
+    } else if (
+      refScreen.current.innerText === "Infinity" ||
+      refScreen.current.innerText === "-Infinity" ||
+      refScreen.current.innerText === "undefined"
+    ) {
+      refScreen.current.innerText = " ";
+    } else {
+      refScreen.current.innerText = String(
+        newEls.splice(0, newEls.length - 1).join("")
+      );
+    }
+  } else {
+    if (refScreen.current.innerText === "Syntax Error") {
+      refScreen.current.innerText = btn.innerText;
+    }
+    refScreen.current.innerText += btn.innerText;
+  }
+}
+
 }
 ```
 
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
 
-**Note: Delete this note and the content within this section and replace with your own learnings.**
+
 
 ### Continued development
+1.ACCESIBILITY
+2.COMPLETE RESPONSIVENESS
+3.PERFORMANCE ENHANCEMENT
+4.PWA
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
-### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Website - (https://installable-calculator.netlify.app/)
+- Frontend Mentor -(https://www.frontendmentor.io/profile/isaac-svg)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
 
 ## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+MDN - (https://developer.mozilla.org/en-US/)
