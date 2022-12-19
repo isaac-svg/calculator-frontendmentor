@@ -138,7 +138,8 @@ I learnt how to implement three themes in an application which is was my first t
 }
 
 ```
-I learnt to use the js arrray methods well not 
+I learnt how to use the useRef hook 
+
 ```js
 export default function CalcualtorFunc(btn, refScreen) {
   if (btn.innerText === "RESET") {
