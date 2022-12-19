@@ -255,66 +255,18 @@ button.special-key {
 @media (prefers-color-scheme: dark) {
   .main {
     background-color: var(--T1-main-background);
-    min-height: 100vh;
-    max-height: none;
-    display: grid;
-    place-items: center;
-    width: 100vw;
-    overflow: hidden;
   }
-  .calc-container {
-    width: 40%;
-    margin-bottom: 1rem;
-    margin-inline: auto;
-  }
+
   .header {
-    display: flex;
     color: white;
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 2rem 0;
-    font-weight: 700;
   }
-  .logo {
-    font-size: 1.2rem;
-    font-weight: 700;
-  }
-  .themes {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  .themes .title {
-    font-size: 0.6rem;
-  }
-  .theme-swichers {
-    gap: 0.4rem;
-    display: flex;
-    flex-direction: column;
-  }
-  .numbers {
-    display: flex;
-    gap: 0.4rem;
-  }
+
   .indicator {
     background-color: var(--T1-screen-background);
-    border-radius: 100vmax;
-    padding: 0.3rem;
-    height: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
 
   .roller {
-    height: 0.85rem;
-    width: 0.85rem;
-    border-radius: 50%;
     background-color: var(--T1-screen-background);
-    cursor: pointer;
-    outline: none;
-    border: none;
   }
 
   /* styling for handling the background 
@@ -329,23 +281,10 @@ button.special-key {
 
   /*  */
 
-  .interactive-section {
-    margin-top: 2rem;
-  }
   .screen {
     background-color: var(--T1-screen-background);
-    display: inline-block;
-    margin-bottom: 1rem;
-    min-height: 5rem;
-    max-height: none;
-    text-align: end;
-    border-radius: 0.4rem;
-    padding: 1rem;
+
     color: white;
-    font-size: 2rem;
-    font-weight: 600;
-    width: 100%;
-    word-break: break-all;
   }
 
   .screen:focus {
@@ -353,25 +292,11 @@ button.special-key {
   }
 
   .keyboard {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.75rem;
     background-color: var(--T1-screen-background);
-    padding: 1.5rem 1rem;
-    border-radius: 0.4rem;
-    width: 100%;
   }
   .keyboard button {
-    text-align: center;
-    border-radius: 0.4rem;
-    outline: none;
-    border: none;
-    min-height: 2rem;
-    max-height: auto;
-    cursor: pointer;
     background-color: white;
-    font-weight: 700;
-    font-size: 18px;
+
     box-shadow: 0rem 0.2rem 0.1rem var(--T1-key-shadow);
     background-color: var(--T1-key-background);
     color: var(--T1-Very-dark-grayish-blue);
@@ -380,9 +305,7 @@ button.special-key {
   .keyboard button:focus {
     outline: 2px solid aqua;
   }
-  .span-2 {
-    grid-column: span 2;
-  }
+
   button.special-key {
     color: white;
     background-color: var(--T1-Very-dark-grayish-blue);
