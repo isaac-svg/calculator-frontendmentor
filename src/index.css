@@ -252,3 +252,74 @@ button.special-key {
     min-height: 2rem;
   }
 }
+@media (prefers-color-scheme: dark) {
+  .main {
+    background-color: var(--T1-main-background);
+  }
+
+  .header {
+    color: white;
+  }
+
+  .indicator {
+    background-color: var(--T1-screen-background);
+  }
+
+  .roller {
+    background-color: var(--T1-screen-background);
+  }
+
+  /* styling for handling the background 
+  by a click of the numbers 1,2,3 the visiblity of the buttons will change 
+  by adding a class to then button
+  
+  
+  */
+  .roller:focus {
+    background-color: var(--T1-Red-key-background-toggle);
+  }
+
+  /*  */
+
+  .interactive-section {
+    margin-top: 2rem;
+  }
+  .screen {
+    background-color: var(--T1-screen-background);
+
+    color: white;
+  }
+
+  .screen:focus {
+    border: 2px solid aqua;
+  }
+
+  .keyboard {
+    background-color: var(--T1-screen-background);
+  }
+  .keyboard button {
+    background-color: white;
+
+    box-shadow: 0rem 0.2rem 0.1rem var(--T1-key-shadow);
+    background-color: var(--T1-key-background);
+    color: var(--T1-Very-dark-grayish-blue);
+  }
+  .keyboard button:hover,
+  .keyboard button:focus {
+    outline: 2px solid aqua;
+  }
+  .span-2 {
+    grid-column: span 2;
+  }
+  button.special-key {
+    color: white;
+    background-color: var(--T1-Very-dark-grayish-blue);
+    box-shadow: 0rem 0.2rem 0.1rem var(--T1-);
+  }
+
+  /* THEME STYLING */
+
+  .main.second__background {
+    background-color: red;
+  }
+}
