@@ -1,5 +1,4 @@
 # Frontend Mentor - Calculator app solution
-# DISCLAIMER - First Version Performance not regarded here no best practices considered just needed a working version. Changes will be made
 This is a solution to the [Calculator app challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/calculator-app-9lteq5N29). Frontend 
 
 ## Table of contents
@@ -54,12 +53,13 @@ Users should be able to:
 
 ### Built with
 
+- [React](https://reactjs.org/) - JS library
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
 - CSS Grid
 
-- [React](https://reactjs.org/) - JS library
+
 
 
 
@@ -72,9 +72,71 @@ I learnt how to implement three themes in an application which is was my first t
 
 
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+:root {
+  /* Theme One */
+  /* Backgorunds */
+  --T1-main-background: hsl(222, 26%, 31%);
+  --T1-toggle-background-keypad-background: hsl(223, 31%, 20%);
+  --T1-screen-background: hsl(224, 36%, 15%);
+  /* Keys */
+  --T1-key-background: hsl(225, 21%, 49%);
+  --T1-key-shadow: hsl(224, 28%, 35%);
+
+  --T1-Red-key-background-toggle: hsl(6, 63%, 50%);
+  --Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+  --T1-key-background: hsl(30, 25%, 89%);
+  --T1-key-shadow: hsl(28, 16%, 65%);
+  /* Text */
+  --T1-Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --T1-White: hsl(0, 0, 100%);
+  /* Theme two */
+
+  /* #### Backgrounds */
+
+  --T2-main-background: hsl(0, 0%, 90%);
+  --T2-toggle-background-keypad-background: hsl(0, 5%, 81%);
+  --T2-screen-background: hsl(0, 0%, 93%);
+
+  /*  Keys */
+
+  --T2-key-background: hsl(185, 42%, 37%);
+  --T2-key-shadow: hsl(185, 58%, 25%);
+
+  --T2-key-background-toggle: hsl(25, 98%, 40%);
+  --T2-key-shadow: hsl(25, 99%, 27%);
+
+  --T2-key-background-: hsl(45, 7%, 89%);
+  --T2-key-shadow: hsl(35, 11%, 61%);
+
+  /* #### Text */
+
+  --T2-Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --T2-White-text: hsl(0, 0, 100%);
+  /* Theme Three */
+
+  /* #### Backgrounds */
+
+  --T3-main-background: hsl(268, 75%, 9%);
+  --T3-toggle-keypad-screen-background: hsl(268, 71%, 12%);
+
+  /* #### Keys */
+  --T3-key-background: hsl(281, 89%, 26%);
+  --T3-key-shadow: hsl(285, 91%, 52%);
+
+  --T3-key-background-toggle: hsl(176, 100%, 44%);
+  --T3-equalkey-shadow: hsl(177, 92%, 70%);
+
+  --T3-key-background: hsl(268, 47%, 21%);
+  --T3-Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+  /* #### Text */
+
+  --T3-Light-yellow: hsl(52, 100%, 62%);
+  --T3-Very-dark-blue: hsl(198, 20%, 13%);
+  --T3-White-text: hsl(0, 0, 100%);
 }
+
 ```
 I learnt to use the js arrray methods well not 
 ```js
@@ -149,7 +211,7 @@ export default function CalcualtorFunc(btn, refScreen) {
 
 
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
+
 
 ## Author
 
