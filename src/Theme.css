@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: "League Spartan", sans-serif;
+}
+:root {
+  /* Theme One */
+  /* Backgorunds */
+  --T1-main-background: hsl(222, 26%, 31%);
+  --T1-toggle-background-keypad-background: hsl(223, 31%, 20%);
+  --T1-screen-background: hsl(224, 36%, 15%);
+  /* Keys */
+  --T1-key-background: hsl(225, 21%, 49%);
+  --T1-key-shadow: hsl(224, 28%, 35%);
+
+  --T1-Red-key-background-toggle: hsl(6, 63%, 50%);
+  --Dark-red-key-shadow: hsl(6, 70%, 34%);
+
+  --T1-key-background: hsl(30, 25%, 89%);
+  --T1-key-shadow: hsl(28, 16%, 65%);
+  /* Text */
+  --T1-Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --T1-White: hsl(0, 0, 100%);
+  /* Theme two */
+
+  /* #### Backgrounds */
+
+  --T2-main-background: hsl(0, 0%, 90%);
+  --T2-toggle-background-keypad-background: hsl(0, 5%, 81%);
+  --T2-screen-background: hsl(0, 0%, 93%);
+
+  /*  Keys */
+
+  --T2-key-background: hsl(185, 42%, 37%);
+  --T2-key-shadow: hsl(185, 58%, 25%);
+
+  --T2-key-background-toggle: hsl(25, 98%, 40%);
+  --T2-key-shadow: hsl(25, 99%, 27%);
+
+  --T2-key-background-: hsl(45, 7%, 89%);
+  --T2-key-shadow: hsl(35, 11%, 61%);
+
+  /* #### Text */
+
+  --T2-Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --T2-White-text: hsl(0, 0, 100%);
+  /* Theme Three */
+
+  /* #### Backgrounds */
+
+  --T3-main-background: hsl(268, 75%, 9%);
+  --T3-toggle-keypad-screen-background: hsl(268, 71%, 12%);
+
+  /* #### Keys */
+  --T3-key-background: hsl(281, 89%, 26%);
+  --T3-key-shadow: hsl(285, 91%, 52%);
+
+  --T3-key-background-toggle: hsl(176, 100%, 44%);
+  --T3-equalkey-shadow: hsl(177, 92%, 70%);
+
+  --T3-key-background: hsl(268, 47%, 21%);
+  --T3-Dark-magenta-key-shadow: hsl(290, 70%, 36%);
+
+  /* #### Text */
+
+  --T3-Light-yellow: hsl(52, 100%, 62%);
+  --T3-Very-dark-blue: hsl(198, 20%, 13%);
+  --T3-White-text: hsl(0, 0, 100%);
+}
+
+.main.theme2 {
+  background-color: var(--T2-main-background);
+}
+.main.theme2 .header {
+  color: black;
+}
+.main.theme2 .indicator {
+  background-color: var(--T2-toggle-background-keypad-background);
+}
+.main.theme2 .roller {
+  background-color: var(--T2-toggle-background-keypad-background);
+}
+.main.theme2 .roller:focus {
+  background-color: var(--T2-key-background-toggle);
+}
+.main.theme2 .screen {
+  background-color: var(--T2-screen-background);
+  color: var(--T2-Very-dark-grayish-yellow);
+}
+
+.main.theme2 .keyboard {
+  /* background-color: var(--T2-screen-background); */
+  background-color: var(--T2-toggle-background-keypad-background);
+}
+.main.theme2 .keyboard button {
+  /* background-color: var(--T2-key-background-); */
+  background-color: var(--T2-key-background-);
+  box-shadow: 0 0.2rem 0.1rem var(--T2-key-shadow);
+}
+.main.theme2 .keyboard button.special-key {
+  background-color: var(--T2-key-background);
+}
+.main.theme2 .keyboard button.equal {
+  background-color: var(--T2-key-background-toggle);
+  color: white;
+}
+/* Theme 3 */
+.main.theme3 {
+  background-color: var(--T3-key-background);
+}
+.main.theme3 .header {
+  color: var(--T3-Light-yellow);
+}
+.main.theme3 .indicator {
+  background-color: var(--T3-toggle-keypad-screen-background);
+}
+.main.theme3 .roller {
+  background-color: var(--T3-toggle-keypad-screen-background);
+}
+.main.theme3 .roller:focus {
+  background-color: var(--T3-key-background-toggle);
+}
+.main.theme3 .screen {
+  background-color: var(--T3-toggle-keypad-screen-background);
+  color: var(--T3-Light-yellow);
+}
+.main.theme3 .keyboard {
+  background-color: var(--T3-toggle-keypad-screen-background);
+}
+.main.theme3 .keyboard button {
+  background-color: var(--T3-key-background);
+  color: var(--T3-Light-yellow);
+  box-shadow: 0rem 0.2rem 0.1rem var(--T3-key-shadow);
+}
+.main.theme3 .keyboard button.equal {
+  background-color: var(--T3-key-background-toggle);
+  color: var(--T3-key-background);
+  box-shadow: 0rem 0.1rem 0.2rem var(--T3-equalkey-shadow);
+}
+.main.theme3 .keyboard button.special-key {
+  background-color: var(--T3-key-background);
+  color: white;
+  box-shadow: 0rem 0.1rem 0.2rem var(--T3-key-shadow);
+  /* -t3-key-background: hsl(268, 47%, 21%); */
+  /* --T3-Dark-magenta-key-shadow: hsl(290, 70%, 36%); */
+}
