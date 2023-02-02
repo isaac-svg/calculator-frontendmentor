@@ -100,55 +100,6 @@ body {
   margin-bottom: 1rem;
   margin-inline: auto;
 }
-.header {
-  display: flex;
-  color: white;
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  margin: 2rem 0;
-  font-weight: 700;
-}
-.logo {
-  font-size: 1.2rem;
-  font-weight: 700;
-}
-.themes {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-}
-.themes .title {
-  font-size: 0.6rem;
-}
-.theme-swichers {
-  gap: 0.4rem;
-  display: flex;
-  flex-direction: column;
-}
-.numbers {
-  display: flex;
-  gap: 0.4rem;
-}
-.indicator {
-  background-color: var(--T1-screen-background);
-  border-radius: 100vmax;
-  padding: 0.3rem;
-  height: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.roller {
-  height: 0.85rem;
-  width: 0.85rem;
-  border-radius: 50%;
-  background-color: var(--T1-screen-background);
-  cursor: pointer;
-  outline: none;
-  border: none;
-}
 
 /* styling for handling the background 
 by a click of the numbers 1,2,3 the visiblity of the buttons will change 
@@ -156,9 +107,6 @@ by adding a class to then button
 
 
 */
-.roller:focus {
-  background-color: var(--T1-Red-key-background-toggle);
-}
 
 /*  */
 
@@ -179,10 +127,11 @@ by adding a class to then button
   font-weight: 600;
   width: 100%;
   word-break: break-all;
+  border: 0;
 }
 
 .screen:focus {
-  border: 2px solid aqua;
+  outline: 2px solid aqua;
 }
 
 .keyboard {

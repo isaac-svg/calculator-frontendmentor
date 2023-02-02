@@ -1,54 +1,48 @@
 export default function CalcualtorFunc(btn, refScreen) {
   if (btn.innerText === "RESET") {
-    refScreen.current.innerText = "";
+    refScreen.innerText = "";
   } else if (btn.innerText === "=") {
     try {
-      let checker = refScreen.current.innerText.split("");
+      let checker = refScreen.innerText.split("");
       if (checker.includes("x")) {
         let placeholder = "";
         const modifiedArray = checker.map((key) => {
           if (key == "x") {
             key = "*";
-          } else {
-            key = key;
           }
           return (placeholder += key);
         });
-
-        refScreen.current.innerText = eval(placeholder);
-      } else if (refScreen.current.innerText.startsWith("0")) {
+        // eval has huge impact on the optimisation of the compiler
+        refScreen.innerText = eval(placeholder);
+      } else if (refScreen.innerText.startsWith("0")) {
         let placeholder = "";
-        const modifiedArray = Array.from(refScreen.current.innerText);
+        const modifiedArray = Array.from(refScreen.innerText);
         modifiedArray.shift();
         modifiedArray.map((key) => {
           return (placeholder += key);
         });
 
-        refScreen.current.innerText = eval(placeholder);
+        refScreen.innerText = eval(placeholder);
       }
-      refScreen.current.innerText = eval(refScreen.current.innerText);
+      refScreen.innerText = eval(refScreen.innerText);
     } catch (error) {
-      refScreen.current.innerText = "Syntax Error";
+      refScreen.innerText = "Syntax Error";
     }
   } else if (btn.innerText === "DEL") {
-    const newEls = Array.from(refScreen.current.innerText);
-    if (refScreen.current.innerText === "Syntax Error") {
-      refScreen.current.innerText = " ";
-    } else if (
-      refScreen.current.innerText === "Infinity" ||
-      refScreen.current.innerText === "-Infinity" ||
-      refScreen.current.innerText === "undefined"
-    ) {
-      refScreen.current.innerText = " ";
-    } else {
-      refScreen.current.innerText = String(
-        newEls.splice(0, newEls.length - 1).join("")
-      );
-    }
+    const newEls = Array.from(refScreen.innerText);
+    // if the string has a text it resets the screen else it removes the first element
+    refScreen.innerText === "Syntax Error" ||
+    refScreen.innerText === "Infinity" ||
+    refScreen.innerText === "-Infinity" ||
+    refScreen.innerText === "undefined"
+      ? (refScreen.innerText = " ")
+      : (refScreen.innerText = String(
+          newEls.splice(0, newEls.length - 1).join("")
+        ));
   } else {
-    if (refScreen.current.innerText === "Syntax Error") {
-      refScreen.current.innerText = btn.innerText;
+    if (refScreen.innerText === "Syntax Error") {
+      refScreen.innerText = btn.innerText;
     }
-    refScreen.current.innerText += btn.innerText;
+    refScreen.innerText += btn.innerText;
   }
 }
