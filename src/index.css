@@ -14,6 +14,7 @@ TABLE OF CONTENTS
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  user-select: none;
 }
 html,
 body {
@@ -125,9 +126,10 @@ by adding a class to then button
   color: white;
   font-size: 2rem;
   font-weight: 600;
-  width: 100%;
-  word-break: break-all;
+  width: min(100%, 1000px);
+  /* word-break: break-all; */
   border: 0;
+  overflow-x: auto;
 }
 
 .screen:focus {
@@ -215,7 +217,7 @@ button.special-key {
   }
 
   .roller {
-    background-color: var(--T1-screen-background);
+    /* background-color: var(--T1-screen-background); */
   }
 
   /* styling for handling the background 

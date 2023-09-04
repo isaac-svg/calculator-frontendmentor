@@ -81,10 +81,10 @@ body {
 .main.theme2 .indicator {
   background-color: var(--T2-toggle-background-keypad-background);
 }
-.main.theme2 .roller {
+.main.theme2 .roller2 {
   background-color: var(--T2-toggle-background-keypad-background);
 }
-.main.theme2 .roller:focus {
+.main.theme2 .roller2:focus {
   background-color: var(--T2-key-background-toggle);
 }
 .main.theme2 .screen {
@@ -118,10 +118,10 @@ body {
 .main.theme3 .indicator {
   background-color: var(--T3-toggle-keypad-screen-background);
 }
-.main.theme3 .roller {
+.main.theme3 .roller3 {
   background-color: var(--T3-toggle-keypad-screen-background);
 }
-.main.theme3 .roller:focus {
+.main.theme3 .roller3:focus {
   background-color: var(--T3-key-background-toggle);
 }
 .main.theme3 .screen {

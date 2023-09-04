@@ -22,7 +22,7 @@ export default function CalcualtorFunc(btn, refScreen) {
           return (placeholder += key);
         });
 
-        refScreen.innerText = eval(placeholder);
+        refScreen.innerText = eval(Number(placeholder));
       }
       refScreen.innerText = eval(refScreen.innerText);
     } catch (error) {
@@ -34,7 +34,8 @@ export default function CalcualtorFunc(btn, refScreen) {
     refScreen.innerText === "Syntax Error" ||
     refScreen.innerText === "Infinity" ||
     refScreen.innerText === "-Infinity" ||
-    refScreen.innerText === "undefined"
+    refScreen.innerText === "undefined" ||
+    refScreen.innerText === "NaN"
       ? (refScreen.innerText = " ")
       : (refScreen.innerText = String(
           newEls.splice(0, newEls.length - 1).join("")
@@ -42,6 +43,7 @@ export default function CalcualtorFunc(btn, refScreen) {
   } else {
     if (refScreen.innerText === "Syntax Error") {
       refScreen.innerText = btn.innerText;
+      return
     }
     refScreen.innerText += btn.innerText;
   }
