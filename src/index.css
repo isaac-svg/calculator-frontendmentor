@@ -91,10 +91,13 @@ body {
   background-color: var(--T1-main-background);
   min-height: 100vh;
   max-height: none;
-  display: grid;
-  place-items: center;
   width: 100vw;
   overflow: hidden;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
 }
 .calc-container {
   width: 40%;
